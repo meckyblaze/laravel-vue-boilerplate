@@ -1,5 +1,5 @@
 import Vue from "vue";
-import Vuex from "vuex";
+import Vuex from "vuex"
 import createPersistedState from "vuex-persistedstate";
 import SecureLS from "secure-ls";
 
@@ -9,13 +9,13 @@ import auth from "./modules/auth";
 Vue.use(Vuex);
 const ls = new SecureLS({ isCompression: false });
 
-export default new vuex.Store({
+export default new Vuex.Store({
   modules: {
     auth
   },
   plugins: [
     createPersistedState({
-      Storage: {
+      storage: {
         key: process.env.APP_NAME,
         getItem: (key) => ls.get(key),
         setItem: (key, value) => ls.set(key, value),

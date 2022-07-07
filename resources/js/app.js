@@ -9,7 +9,7 @@ require('./bootstrap');
 
 window.Vue = require('vue').default;
 
-import router from "./plugins/router";
+import router from "./router";
 import vuetify from "./plugins/vuetify";
 import "./plugins/filters";
 
